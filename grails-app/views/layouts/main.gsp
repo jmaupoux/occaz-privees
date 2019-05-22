@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>
-        <g:layoutTitle default="Grails"/>
+        <g:layoutTitle default="Occaz privées"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
@@ -16,16 +16,20 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark navbar-static-top" role="navigation">
-    <a class="navbar-brand" href="/#"><asset:image src="grails.svg" alt="Grails Logo"/></a>
+<nav class="navbar navbar-expand-lg navbar-dark navbar-static-top bg-dark" role="navigation">
+    <a class="navbar-brand" href="/#"><asset:image src="occaz.png" alt="Occaz privées Logo" width="64px"/></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" aria-expanded="false" style="height: 0.8px;" id="navbarContent">
-        <ul class="nav navbar-nav ml-auto">
-            <g:pageProperty name="page.nav"/>
+        <ul class="nav navbar-nav">
+            <li><g:link controller="occaz" action="form">Nouvelle occaz <i class="fas fa-user"></i></g:link>
         </ul>
+        <form class="form-inline ml-auto">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" autofocus>
+            <button class="btn my-2 my-sm-0" type="submit">Search</button>
+        </form>
     </div>
 
 </nav>

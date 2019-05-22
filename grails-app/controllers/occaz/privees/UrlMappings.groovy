@@ -3,11 +3,7 @@ package occaz.privees
 class UrlMappings {
 
     static mappings = {
-        "/$controller/$action?/$id?(.$format)?"{
-            constraints {
-                // apply constraints here
-            }
-        }
+        "/occazs"(resources:'occaz', includes:['index', 'show', 'save', 'delete'])
 
         "/"(view:"/index")
         "500"(view:'/error')
