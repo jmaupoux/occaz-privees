@@ -23,18 +23,18 @@
     </button>
 
     <div class="collapse navbar-collapse" aria-expanded="false" style="height: 0.8px;" id="navbarContent">
-        <ul class="nav navbar-nav">
-            <li><g:link controller="occaz" action="form">Nouvelle occaz <i class="fas fa-user"></i></g:link>
+        <ul class="nav navbar-nav  ml-auto">
+            <li><g:link controller="occaz" action="create"><i class="fas fa-plus-circle fa-4x"></i></g:link>
         </ul>
-        <form class="form-inline ml-auto">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" autofocus>
-            <button class="btn my-2 my-sm-0" type="submit">Search</button>
-        </form>
     </div>
 
 </nav>
 
-<g:layoutBody/>
+<div class="container">
+    <div class=" m-5">
+        <g:layoutBody/>
+    </div>
+</div>
 
 <div class="footer row" role="contentinfo">
     <div class="col">

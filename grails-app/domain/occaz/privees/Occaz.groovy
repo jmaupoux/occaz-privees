@@ -6,18 +6,21 @@ class Occaz {
 
     String id
     String title
-    String content
+    String description
 
     String location
 
     int price
-    boolean gift
+    boolean gift = false
 
     LocalDate dateCreated
-    Locale    lastUpdated
+    LocalDate lastUpdated
 
     static constraints = {
         id generator: 'uuid'
+        location nullable: true
+        dateCreated nullable: true
+        lastUpdated nullable: true
     }
 
     static mapping = {
