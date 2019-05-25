@@ -2,7 +2,6 @@ package occaz.privees
 
 import grails.validation.Validateable
 import org.grails.core.io.ResourceLocator
-import org.grails.io.support.Resource
 import org.springframework.beans.factory.annotation.Value
 
 class OccazController {
@@ -15,13 +14,14 @@ class OccazController {
     ResourceLocator grailsResourceLocator
 
     def index() {
+        def search = params.q
         def occazs = Occaz.findAll(max: max)
 
-        [occazs: occazs]
+        [occazs: occazs, locations: grailsApplication.config.app.locations]
     }
 
     def create(){
-        [command: flash.command]
+        [command: flash.command, locations: grailsApplication.config.app.locations]
     }
 
     def show(String id){
@@ -58,11 +58,13 @@ class OccazCommand implements Validateable {
     String title
     String description
     Integer price
+    String location
 
     static constraints = {
         title(blank: false, size: 1..64)
         description(blank: false, size: 1..2048)
         price(nullable: false, min: 0)
+        location nullable: true
     }
 }
 

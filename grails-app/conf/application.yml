@@ -131,3 +131,6 @@ environments:
 app:
     listing:
         max: 10
+    locations:
+        - Site 1
+        - Site 2

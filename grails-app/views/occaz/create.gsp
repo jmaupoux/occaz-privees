@@ -32,6 +32,14 @@
                 </div>
             </div>
             <div class="form-row">
+                <div class="form-group col-sm-12 col-md-3">
+                    <label for="price">${g.message(code:'occazCommand.location.label')}</label>
+                    ${locations[0]}
+                    <g:select name="location" from="${locations}" value="${command?.location}" class="form-control"
+                      noSelection="['':'']"/>
+                </div>
+            </div>
+            <div class="form-row">
                 <div class="form-group col-sm-12 col-md-2">
                     <label for="price">${g.message(code:'occazCommand.price.label')}</label>
                     <div class="input-group">

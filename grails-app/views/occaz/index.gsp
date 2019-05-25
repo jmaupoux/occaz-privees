@@ -7,7 +7,7 @@
 
 <div class="row">
     <div class="col-3">
-        <g:form controller="occaz" action="search" class="form-inline  mr-auto ml-auto" method="GET">
+        <g:form controller="occaz" action="index" class="form-inline  mr-auto ml-auto" method="GET">
             <div class="input-group">
                 <input type="text" class="form-control" aria-describedby="basic-addon2" name="q">
                 <div class="input-group-append">
@@ -29,7 +29,6 @@
                         <p class="card-text">${o.description}</p>
                     </div>
                 </div>
-                <p>Occaz ${o.title}</p>
             </g:link>
         </g:each>
     </div>
