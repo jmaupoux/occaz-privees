@@ -13,5 +13,6 @@
 *= require mobile
 *= require fa
 *= require sticky-footer
+*= require image-wrapper
 *= require_self
 */

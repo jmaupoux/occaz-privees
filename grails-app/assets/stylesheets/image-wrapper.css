@@ -1,0 +1,14 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+.img-wrapper{
+    position: relative;
+    overflow:hidden;
+    height:200px;
+}
+
+.img-wrapper img{
+    position: absolute;
+    top:-100%; left:0; right: 0; bottom:-100%;
+    margin: auto;
+    max-width: 100%;
+}
