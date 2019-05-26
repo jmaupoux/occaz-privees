@@ -12,5 +12,6 @@
 *= require main
 *= require mobile
 *= require fa
+*= require sticky-footer
 *= require_self
 */
