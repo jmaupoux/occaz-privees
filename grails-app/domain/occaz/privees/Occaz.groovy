@@ -10,8 +10,8 @@ class Occaz {
 
     String location
 
-    int price
-    boolean gift = false
+    Integer price
+    boolean free = false
 
     LocalDate dateCreated
     LocalDate lastUpdated
@@ -21,6 +21,7 @@ class Occaz {
         location nullable: true
         dateCreated nullable: true
         lastUpdated nullable: true
+        price nullable: true
     }
 
     static mapping = {

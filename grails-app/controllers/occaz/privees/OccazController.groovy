@@ -59,11 +59,16 @@ class OccazCommand implements Validateable {
     String description
     Integer price
     String location
+    boolean free = false
 
     static constraints = {
         title(blank: false, size: 1..64)
         description(blank: false, size: 1..2048)
-        price(nullable: false, min: 0)
+        price(nullable: true, validator:{
+            value, obj ->
+                if(obj.free) return true
+                if (!value) return ['nullable']
+        })
         location nullable: true
     }
 }

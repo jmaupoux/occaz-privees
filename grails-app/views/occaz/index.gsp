@@ -7,14 +7,19 @@
 
 <div class="row">
     <div class="col-3">
-        <g:form controller="occaz" action="index" class="form-inline  mr-auto ml-auto" method="GET">
-            <div class="input-group">
-                <input type="text" class="form-control" aria-describedby="basic-addon2" name="q">
-                <div class="input-group-append">
-                    <span class="input-group-text" id="basic-addon2">
-                        <i class="fas fa-search"></i>
-                    </span>
+        <g:form controller="occaz" action="index" method="GET">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" aria-describedby="basic-addon2" name="q">
+                    <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
                 </div>
+            </div>
+            <div class="form-group ">
+                <button type="submit" class="btn btn-dark">Filtrer <i class="fas fa-filter"></i> </button>
             </div>
         </g:form>
     </div>
@@ -24,7 +29,9 @@
                 <div class="card flex-row flex-wrap w-100" style="width: 18rem;">
                     <img src="/occazs/${o.id}/pic/toto"  class="card-img-left w-25"/>
                     <div class="card-body">
-                        <h5 class="card-title">${o.title}</h5>
+                        <div class="card-title">
+                            <h5 class="card-title">${o.title} - <g:if test="${o.free}"><i class="fas fa-gift"></i> </g:if><g:else>${o.price} €</g:else></h5>
+                        </div>
                         <hr/>
                         <p class="card-text">${o.description}</p>
                     </div>

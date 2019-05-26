@@ -40,16 +40,28 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-sm-12 col-md-2">
+                <div class="form-group col-sm-6 col-md-2">
                     <label for="price">${g.message(code:'occazCommand.price.label')}</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="inputGroupPrepend">€</span>
                         </div>
-                        <input type="text" class="form-control ${command?.errors?.hasFieldErrors('price') ? 'is-invalid' : ''}" id="price" name="price" value="${command?.price}" aria-describedby="inputGroupPrepend">
+                        <input type="text" class="form-control ${command?.errors?.hasFieldErrors('price') ? 'is-invalid' : ''}"
+                               ${command?.free ? 'disabled' : ''}
+                               id="price" name="price" value="${command?.price}" aria-describedby="inputGroupPrepend">
                         <div class="invalid-feedback">
                             <g:fieldError field="price" bean="${command}"/>
                         </div>
+                    </div>
+                </div>
+                <div class="form-group col-sm-6 col-md-2">
+                    <label></label>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-primary ${command?.free ? 'active':''}" onclick="toggleFree()">
+                            <input type="checkbox" class="form-control" id="free" name="free" value="true" ${command?.free ? 'checked' : ''}>
+                            Gratuit !
+                            <i class="fas fa-gift"></i>
+                        </label>
                     </div>
                 </div>
             </div>
@@ -60,6 +72,19 @@
 
     </div>
 </div>
+
+<script type="text/javascript">
+    function toggleFree(){
+        if($("#price").attr('disabled')) {
+            $("#price").removeAttr('disabled')
+            $("input[name='_free']").val('false')
+        }else{
+            $('#price').val('')
+            $('#price').attr('disabled', 'disabled')
+            $("input[name='_free']").val('true')
+        }
+    }
+</script>
 
 </body>
 </html>
