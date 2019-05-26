@@ -7,7 +7,7 @@ class UrlMappings {
         get "/occazs/create"(controller:"occaz", action:"create")
         post "/occazs"(controller:"occaz", action:"save")
         get "/occazs/$id"(controller:"occaz", action:"show")
-        get "/occazs/$id/pic/${picId}"(controller:"occaz", action:"showPicture")
+        get "/occazs/$occazId/pic/$id"(controller:"occaz", action:"showPicture")
         //get "/occazs/$id/edit"(controller:"occaz", action:"edit")
         //put "/occazs/$id"(controller:"occaz", action:"update")
         //delete "/occazs/$id"(controller:"occaz", action:"delete")

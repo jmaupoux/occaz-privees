@@ -3,6 +3,7 @@ package occaz.privees
 import grails.validation.Validateable
 import org.grails.core.io.ResourceLocator
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.web.multipart.MultipartFile
 
 class OccazController {
 
@@ -40,7 +41,16 @@ class OccazController {
             redirect(controller: 'occazs', action: 'create')
             return
         }
-        occazService.save(new Occaz(command.properties))
+
+        Occaz occaz = new Occaz()
+        bindData(occaz, command, [exclude : 'mainPic'])
+
+        if(command.mainPic) {
+            OccazPic pic = new OccazPic(content: command.mainPic.bytes, contentType: command.mainPic.contentType)
+            occaz.mainPic = pic
+        }
+
+        occazService.save(occaz)
         redirect controller: 'occazs'
     }
 
@@ -48,9 +58,9 @@ class OccazController {
         //TODO Occaz.deleteAll(id);
     }
 
-    def showPicture(String id, String picId){
-        def image = getClass().getResourceAsStream('/occaz.png')
-        render file: image, contentType: 'image/png'
+    def showPicture(String occazId, String id){
+        def pic = OccazPic.findByOccazAndId(Occaz.get(occazId), id)
+        render file: pic.content, contentType: pic.contentType
     }
 }
 
@@ -60,6 +70,7 @@ class OccazCommand implements Validateable {
     Integer price
     String location
     boolean free = false
+    MultipartFile mainPic
 
     static constraints = {
         title(blank: false, size: 1..64)
@@ -70,6 +81,12 @@ class OccazCommand implements Validateable {
                 if (!value) return ['nullable']
         })
         location nullable: true
+        mainPic nullable: true, validator : { val, obj ->
+            if (!['png', 'jpg', 'jpeg'].any { extension ->
+                val.originalFilename?.toLowerCase()?.endsWith(extension)
+            } )
+                return ['extension']
+        }
     }
 }
 

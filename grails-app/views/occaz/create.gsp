@@ -39,6 +39,15 @@
                 </div>
             </div>
             <div class="form-row">
+                <div class="form-group col-sm-12 col-md-3">
+                    <label for="mainPic">${g.message(code:'occazCommand.mainPic.label')}</label>
+                    <input id="mainPic" type="file" name="mainPic" accept="image/*" class="${command?.errors?.hasFieldErrors('mainPic') ? 'is-invalid' : ''}" />
+                    <div class="invalid-feedback">
+                        <g:fieldError field="mainPic" bean="${command}"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
                 <div class="form-group col-sm-6 col-md-2">
                     <label for="price">${g.message(code:'occazCommand.price.label')}</label>
                     <div class="input-group">

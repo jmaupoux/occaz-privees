@@ -16,6 +16,8 @@ class Occaz {
     LocalDate dateCreated
     LocalDate lastUpdated
 
+    static hasOne = [mainPic:OccazPic]
+
     static constraints = {
         id generator: 'uuid'
         location nullable: true
