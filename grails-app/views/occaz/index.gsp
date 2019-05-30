@@ -28,7 +28,12 @@
             <g:link controller="occaz" action="show" id="${o.id}" style="all:unset; cursor:pointer">
                 <div class="card flex-row flex-wrap w-100" style="width: 18rem;">
                     <div class="img-wrapper card-img-left">
-                        <img src="/occaz/${o.id}/pic/${o.mainPic?.id}"/>
+                        <g:if test="${o.mainPic}">
+                            <img src="/occaz/${o.id}/pic/${o.mainPic?.id}"/>
+                        </g:if>
+                        <g:else>
+                            <asset:image src="no-pic.svg" alt="Photo non disponible"/>
+                        </g:else>
                     </div>
                     <div class="card-body">
                         <div class="card-title">

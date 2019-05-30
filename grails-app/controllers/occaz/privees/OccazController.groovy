@@ -16,7 +16,7 @@ class OccazController {
 
     def index() {
         def search = params.q
-        def occazs = Occaz.findAll(max: max)
+        def occazs = Occaz.listOrderByDateCreated([max: 10])
 
         [occazs: occazs, locations: grailsApplication.config.app.locations, categories: grailsApplication.config.app.categories]
     }
@@ -45,7 +45,7 @@ class OccazController {
         Occaz occaz = new Occaz()
         bindData(occaz, command, [exclude : 'mainPic'])
 
-        if(command.mainPic) {
+        if(!command.mainPic?.empty) {
             OccazPic pic = new OccazPic(content: command.mainPic.bytes, contentType: command.mainPic.contentType)
             occaz.mainPic = pic
         }
@@ -83,6 +83,9 @@ class OccazCommand implements Validateable {
         })
         location nullable: true
         mainPic nullable: true, validator : { val, obj ->
+            if(!val || val.empty){
+                return true
+            }
             if (!['png', 'jpg', 'jpeg'].any { extension ->
                 val.originalFilename?.toLowerCase()?.endsWith(extension)
             } )

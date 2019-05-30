@@ -1,6 +1,7 @@
 package occaz.privees
 
-import java.time.LocalDate
+
+import java.time.LocalDateTime
 
 class Occaz {
 
@@ -14,8 +15,8 @@ class Occaz {
     Integer price
     boolean free = false
 
-    LocalDate dateCreated
-    LocalDate lastUpdated
+    LocalDateTime dateCreated
+    LocalDateTime lastUpdated
 
     static hasOne = [mainPic:OccazPic]
 

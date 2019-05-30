@@ -9,6 +9,9 @@ grails:
             # Disabled by default for performance reasons
             events: false
         failOnError: true
+    plugin:
+        databasemigration:
+            updateOnStart: true
 info:
     app:
         name: '@info.app.name@'
@@ -103,11 +106,11 @@ dataSource:
 environments:
     development:
         dataSource:
-            dbCreate: create-drop
+            dbCreate: none
             url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     test:
         dataSource:
-            dbCreate: update
+            dbCreate: none
             url: jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     production:
         dataSource:
