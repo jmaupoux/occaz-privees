@@ -1,6 +1,6 @@
-package occaz.privees
+package priv.occaz
 
-import java.sql.Types
+
 import java.time.LocalDate
 
 class OccazPic {

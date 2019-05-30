@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>
-        <g:layoutTitle default="Occaz privées"/>
+        <g:layoutTitle default="Priv' Occaz - vos petites annonces privées"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
@@ -17,7 +17,7 @@
 <body class="h-100">
 <div class="wrapper">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top bg-dark" role="navigation">
-        <a class="navbar-brand" href="/#"><asset:image src="occaz.png" alt="Occaz privées Logo" width="64px"/></a>
+        <a class="navbar-brand" href="/#"><asset:image src="occaz.png" alt="Priv'Occaz Logo" width="64px"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

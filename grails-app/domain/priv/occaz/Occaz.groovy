@@ -1,4 +1,4 @@
-package occaz.privees
+package priv.occaz
 
 
 import java.time.LocalDateTime

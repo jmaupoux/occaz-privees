@@ -12,7 +12,7 @@ buildscript {
 }
 
 version "0.1"
-group "occaz.privees"
+group "priv-occaz"
 
 apply plugin:"eclipse"
 apply plugin:"idea"

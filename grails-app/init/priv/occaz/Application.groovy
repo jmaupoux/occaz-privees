@@ -1,4 +1,4 @@
-package occaz.privees
+package priv.occaz
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

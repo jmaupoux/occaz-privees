@@ -1,4 +1,4 @@
-package occaz.privees
+package priv.occaz
 
 import grails.validation.Validateable
 import org.grails.core.io.ResourceLocator
