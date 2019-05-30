@@ -138,3 +138,75 @@ app:
     locations:
         - Site 1
         - Site 2
+    categories:
+        - EMPLOI :
+              - Offres d'emploi
+        - VEHICULES :
+              - Voitures
+              - Motos
+              - Caravaning
+              - Utilitaires
+              - Equipement Auto
+              - Equipement Moto
+              - Equipement Caravaning
+              - Nautisme
+              - Equipement Nautisme
+        - IMMOBILIER :
+              - Ventes immobilières
+              - Locations
+              - Colocations
+              - Bureaux & Commerces
+        - VACANCES :
+              - Locations & Gîtes
+              - Chambres d'hôtes
+              - Campings
+              - Hôtels
+              - Hébergements insolites
+        - MULTIMEDIA:
+              - Informatique
+              - Consoles & Jeux vidéo
+              - Image & Son
+              - Téléphonie
+        - MAISON :
+              - Ameublement
+              - Electroménager
+              - Arts de la table
+              - Décoration
+              - Linge de maison
+              - Bricolage
+              - Jardinage
+              - Vêtements
+              - Chaussures
+              - Accessoires & Bagagerie
+              - Montres & Bijoux
+              - Equipement bébé
+              - Vêtements bébé
+        - LOISIRS :
+              - DVD / Films
+              - CD / Musique
+              - Livres
+              - Animaux
+              - Vélos
+              - Sports & Hobbies
+              - Instruments de musique
+              - Collection
+              - Jeux & Jouets
+              - Vins & Gastronomie
+        - MATERIEL PROFESSIONNEL :
+              - Matériel Agricole
+              - Transport - Manutention
+              - BTP - Chantier Gros-oeuvre
+              - Outillage - Matériaux 2nd-oeuvre
+              - Équipements Industriels
+              - Restauration - Hôtellerie
+              - Fournitures de Bureau
+              - Commerces & Marchés
+              - Matériel Médical
+        - SERVICES :
+              - Prestations de services
+              - Billetterie
+              - Evénements
+              - Cours particuliers
+              - Covoiturage
+        - Autres:
+              - Autres

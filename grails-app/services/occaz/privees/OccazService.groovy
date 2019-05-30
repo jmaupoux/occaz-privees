@@ -6,6 +6,6 @@ import grails.gorm.transactions.Transactional
 class OccazService {
 
     def save(Occaz occaz) {
-        occaz.save()
+        occaz.save(failOnError: true)
     }
 }

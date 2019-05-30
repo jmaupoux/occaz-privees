@@ -3,11 +3,11 @@ package occaz.privees
 class UrlMappings {
 
     static mappings = {
-        get "/occazs"(controller:"occaz", action:"index")
-        get "/occazs/create"(controller:"occaz", action:"create")
-        post "/occazs"(controller:"occaz", action:"save")
-        get "/occazs/$id"(controller:"occaz", action:"show")
-        get "/occazs/$occazId/pic/$id"(controller:"occaz", action:"showPicture")
+        get "/occaz"(controller:"occaz", action:"index")
+        get "/occaz/create"(controller:"occaz", action:"create")
+        post "/occaz"(controller:"occaz", action:"save")
+        get "/occaz/$id"(controller:"occaz", action:"show")
+        get "/occaz/$occazId/pic/$id"(controller:"occaz", action:"showPicture")
         //get "/occazs/$id/edit"(controller:"occaz", action:"edit")
         //put "/occazs/$id"(controller:"occaz", action:"update")
         //delete "/occazs/$id"(controller:"occaz", action:"delete")

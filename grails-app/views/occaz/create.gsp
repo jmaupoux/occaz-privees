@@ -12,7 +12,27 @@
 
     <div class="card-body bg-light text-dark">
 
-        <g:uploadForm url="/occazs" method="POST" class="needs-validation" novalidate="novalidate">
+        <g:uploadForm url="/occaz" method="POST" class="needs-validation" novalidate="novalidate">
+            <div class="form-row">
+                <div class="form-group col-sm-12">
+                    <label for="category">${g.message(code:'occazCommand.category.label')}</label>
+                    <select class="form-control ${command?.errors?.hasFieldErrors('category') ? 'is-invalid' : ''}" id="category" name="category">
+                        <option></option>
+                        <g:each var="c" in="${categories}">
+                            <g:each var="el" in="${c}">
+                                <option value="${el.key}" disabled style="background-color:#E6E6E6">-- ${el.key} --</option>
+                                <g:each var="c2" in="${el.value}">
+                                    <option value="${c2}" ${command?.category == c2 ? 'selected' : ''}>${c2}</option>
+                                </g:each>
+                            </g:each>
+                        </g:each>
+                    </select>
+                    <div class="invalid-feedback">
+                        <g:fieldError field="category" bean="${command}"/>
+                    </div>
+                </div>
+            </div>
+
             <div class="form-row">
                 <div class="form-group col-sm-12">
                     <label for="title">${g.message(code:'occazCommand.title.label')}</label>

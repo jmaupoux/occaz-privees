@@ -27,12 +27,17 @@
         <g:each in="${occazs}" var="o">
             <g:link controller="occaz" action="show" id="${o.id}" style="all:unset; cursor:pointer">
                 <div class="card flex-row flex-wrap w-100" style="width: 18rem;">
-                    <div class="img-wrapper card-img-left w-25">
-                        <img src="/occazs/${o.id}/pic/${o.mainPic?.id}""/>
+                    <div class="img-wrapper card-img-left">
+                        <img src="/occaz/${o.id}/pic/${o.mainPic?.id}"/>
                     </div>
                     <div class="card-body">
                         <div class="card-title">
-                            <h5 class="card-title">${o.title} - <g:if test="${o.free}"><i class="fas fa-gift"></i> </g:if><g:else>${o.price} €</g:else></h5>
+                            <h5 class="card-title">${o.title}
+                                <span class="float-right">
+                                    <g:if test="${o.free}"><i class="fas fa-gift"></i> </g:if><g:else>${o.price} €</g:else>
+                                </span>
+                            </h5>
+                            <h6 class="text-muted">${o.category}</h6>
                         </div>
                         <hr/>
                         <p class="card-text">${o.description}</p>

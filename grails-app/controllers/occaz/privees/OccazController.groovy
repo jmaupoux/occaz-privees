@@ -18,11 +18,11 @@ class OccazController {
         def search = params.q
         def occazs = Occaz.findAll(max: max)
 
-        [occazs: occazs, locations: grailsApplication.config.app.locations]
+        [occazs: occazs, locations: grailsApplication.config.app.locations, categories: grailsApplication.config.app.categories]
     }
 
     def create(){
-        [command: flash.command, locations: grailsApplication.config.app.locations]
+        [command: flash.command, locations: grailsApplication.config.app.locations, categories: grailsApplication.config.app.categories]
     }
 
     def show(String id){
@@ -38,7 +38,7 @@ class OccazController {
     def save(OccazCommand command){
         if (command.hasErrors()) {
             flash.command = command
-            redirect(controller: 'occazs', action: 'create')
+            redirect(controller: 'occaz', action: 'create')
             return
         }
 
@@ -51,7 +51,7 @@ class OccazController {
         }
 
         occazService.save(occaz)
-        redirect controller: 'occazs'
+        redirect action: 'index'
     }
 
     def delete(String id){
@@ -71,6 +71,7 @@ class OccazCommand implements Validateable {
     String location
     boolean free = false
     MultipartFile mainPic
+    String category
 
     static constraints = {
         title(blank: false, size: 1..64)
@@ -87,6 +88,7 @@ class OccazCommand implements Validateable {
             } )
                 return ['extension']
         }
+        category nullable: false
     }
 }
 

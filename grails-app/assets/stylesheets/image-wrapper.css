@@ -3,7 +3,8 @@
 .img-wrapper{
     position: relative;
     overflow:hidden;
-    height:200px;
+    height:150px;
+    width: 150px;
 }
 
 .img-wrapper img{

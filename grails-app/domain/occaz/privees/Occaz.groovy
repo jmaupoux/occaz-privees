@@ -5,6 +5,7 @@ import java.time.LocalDate
 class Occaz {
 
     String id
+    String category
     String title
     String description
 
@@ -24,6 +25,7 @@ class Occaz {
         dateCreated nullable: true
         lastUpdated nullable: true
         price nullable: true
+        mainPic nullable: true
     }
 
     static mapping = {
