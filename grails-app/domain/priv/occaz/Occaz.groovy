@@ -15,6 +15,9 @@ class Occaz {
     Integer price
     boolean free = false
 
+    String skype
+    String mail
+
     LocalDateTime dateCreated
     LocalDateTime lastUpdated
 
@@ -27,6 +30,8 @@ class Occaz {
         lastUpdated nullable: true
         price nullable: true
         mainPic nullable: true
+        skype nullable: true
+        mail nullable: true
     }
 
     static mapping = {

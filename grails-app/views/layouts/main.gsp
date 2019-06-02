@@ -47,5 +47,6 @@
     </div>
 </footer>
 <asset:javascript src="application.js"/>
+<g:pageProperty name="page.js.custom"/>
 </body>
 </html>

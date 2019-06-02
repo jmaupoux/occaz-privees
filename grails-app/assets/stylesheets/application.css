@@ -14,5 +14,6 @@
 *= require fa
 *= require sticky-footer
 *= require image-wrapper
+*= require priv-occaz
 *= require_self
 */

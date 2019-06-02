@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div class="form-row">
-                <div class="form-group col-sm-6 col-md-2">
+                <div class="form-group col-sm-6 col-md-3">
                     <label for="price">${g.message(code:'occazCommand.price.label')}</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-group col-sm-6 col-md-2">
+                <div class="form-group col-sm-6 col-md-3">
                     <label></label>
                     <div class="btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-primary ${command?.free ? 'active':''}" onclick="toggleFree()">
@@ -90,6 +90,38 @@
                             Gratuit !
                             <i class="fas fa-gift"></i>
                         </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="skype">${g.message(code:'occazCommand.skype.label')}</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="igskype">
+                                <i class="fab fa-skype"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control ${command?.errors?.hasFieldErrors('skype') ? 'is-invalid' : ''}"
+                        id="skype" name="skype" value="${command?.skype}" aria-describedby="igskype">
+                        <div class="invalid-feedback">
+                            <g:fieldError field="skype" bean="${command}"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="mail">${g.message(code:'occazCommand.mail.label')}</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="igmail">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control ${command?.errors?.hasFieldErrors('mail') ? 'is-invalid' : ''}"
+                               id="mail" name="mail" value="${command?.mail}" aria-describedby="igmail">
+                        <div class="invalid-feedback">
+                            <g:fieldError field="mail" bean="${command}"/>
+                        </div>
                     </div>
                 </div>
             </div>

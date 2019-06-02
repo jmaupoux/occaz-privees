@@ -1,0 +1,15 @@
+.mini-description pre{
+    max-height: 100px;
+    overflow-y: hidden;
+}
+
+.mini-description footer{
+    display:none;
+}
+
+
+.show-description{
+    bottom: 10px;
+    right: 10px;
+    position: absolute;
+}

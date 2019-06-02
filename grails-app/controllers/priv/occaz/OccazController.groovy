@@ -72,6 +72,8 @@ class OccazCommand implements Validateable {
     boolean free = false
     MultipartFile mainPic
     String category
+    String skype
+    String mail
 
     static constraints = {
         title(blank: false, size: 1..64)
@@ -92,6 +94,13 @@ class OccazCommand implements Validateable {
                 return ['extension']
         }
         category nullable: false
+        mail nullable: true
+        skype nullable: true, validator : { val, obj ->
+            if(!val && !obj.mail )
+                return ['contactRequired']
+            return true
+        }
+
     }
 }
 
