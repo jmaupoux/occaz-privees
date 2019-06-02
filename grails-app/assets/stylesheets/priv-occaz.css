@@ -1,15 +1,19 @@
-.mini-description pre{
+.card-occaz.summary pre{
     max-height: 100px;
     overflow-y: hidden;
 }
 
-.mini-description footer{
+.card-occaz.summary footer{
     display:none;
 }
 
 
-.show-description{
+.card-occaz .show-all{
     bottom: 10px;
     right: 10px;
     position: absolute;
+}
+
+.card-occaz pre{
+    max-height: 300px;
 }

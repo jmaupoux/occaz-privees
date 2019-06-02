@@ -31,7 +31,7 @@
                data-pic="${o.mainPic}"
                data-skype="${o.skype}"
                data-mail="${o.mail}">
-                <div class="card flex-row flex-wrap w-100 mini-description" style="width: 18rem;">
+                <div class="card flex-row flex-wrap w-100 summary card-occaz" style="width: 18rem;">
                     <div class="img-wrapper card-img-left">
                         <g:if test="${o.mainPic}">
                             <img src="/occaz/${o.id}/pic/${o.mainPic?.id}"/>
@@ -41,7 +41,7 @@
                         </g:else>
                     </div>
                     <div class="card-body">
-                        <a href="#" class="float-right show-description text-dark">
+                        <a href="#" class="float-right show-all text-dark">
                             <i class="fa fa-2x fa-plus-square"></i>
                         </a>
                         <div class="card-title">
@@ -50,7 +50,11 @@
                                     <g:if test="${o.free}"><i class="fas fa-gift"></i> </g:if><g:else>${o.price} €</g:else>
                                 </span>
                             </h5>
-                            <h6 class="text-muted">${o.category}</h6>
+                            <h6 class="text-muted">${o.category}
+                                <g:if test="${o.location}">
+                                    - <span class="text-secondary"> ${o.location} </span>
+                                </g:if>
+                            </h6>
                         </div>
                         <hr/>
                         <div>

@@ -1,4 +1,4 @@
-$('.show-description').on('click', function () {
+$('.show-all').on('click', function () {
     $(this).hide();
-    $(this).closest(".card").removeClass("mini-description");
+    $(this).closest(".card").removeClass("summary");
 })
