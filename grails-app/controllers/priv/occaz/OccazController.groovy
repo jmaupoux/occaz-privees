@@ -94,7 +94,11 @@ class OccazCommand implements Validateable {
                 return ['extension']
         }
         category nullable: false
-        mail nullable: true
+        mail nullable: true, validator : { val, obj ->
+            if(!val && !obj.mail )
+                return ['contactRequired']
+            return true
+        }
         skype nullable: true, validator : { val, obj ->
             if(!val && !obj.mail )
                 return ['contactRequired']
