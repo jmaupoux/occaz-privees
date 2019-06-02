@@ -1,6 +1,6 @@
 databaseChangeLog = {
 
-    changeSet(author: "jmx (generated)", id: "1559474600261-1") {
+    changeSet(author: "jmx (generated)", id: "1559476224285-1") {
         createTable(tableName: "occaz") {
             column(name: "id", type: "VARCHAR(255)") {
                 constraints(nullable: "false")
@@ -14,7 +14,7 @@ databaseChangeLog = {
                 constraints(nullable: "false")
             }
 
-            column(name: "title", type: "VARCHAR(255)") {
+            column(name: "title", type: "VARCHAR(64)") {
                 constraints(nullable: "false")
             }
 
@@ -34,13 +34,13 @@ databaseChangeLog = {
 
             column(name: "mail", type: "VARCHAR(255)")
 
-            column(name: "description", type: "VARCHAR(255)") {
+            column(name: "description", type: "VARCHAR(2048)") {
                 constraints(nullable: "false")
             }
         }
     }
 
-    changeSet(author: "jmx (generated)", id: "1559474600261-2") {
+    changeSet(author: "jmx (generated)", id: "1559476224285-2") {
         createTable(tableName: "occaz_pic") {
             column(name: "id", type: "VARCHAR(255)") {
                 constraints(nullable: "false")
@@ -68,15 +68,15 @@ databaseChangeLog = {
         }
     }
 
-    changeSet(author: "jmx (generated)", id: "1559474600261-3") {
+    changeSet(author: "jmx (generated)", id: "1559476224285-3") {
         addPrimaryKey(columnNames: "id", constraintName: "occazPK", tableName: "occaz")
     }
 
-    changeSet(author: "jmx (generated)", id: "1559474600261-4") {
+    changeSet(author: "jmx (generated)", id: "1559476224285-4") {
         addPrimaryKey(columnNames: "id", constraintName: "occaz_picPK", tableName: "occaz_pic")
     }
 
-    changeSet(author: "jmx (generated)", id: "1559474600261-5") {
+    changeSet(author: "jmx (generated)", id: "1559476224285-5") {
         addForeignKeyConstraint(baseColumnNames: "occaz_id", baseTableName: "occaz_pic", constraintName: "FKn3kdw3e2rjg9mnao7jlygwhc1", deferrable: "false", initiallyDeferred: "false", referencedColumnNames: "id", referencedTableName: "occaz")
     }
 }

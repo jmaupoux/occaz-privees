@@ -36,7 +36,7 @@
             <div class="form-row">
                 <div class="form-group col-sm-12">
                     <label for="title">${g.message(code:'occazCommand.title.label')}</label>
-                    <input type="text" class="form-control ${command?.errors?.hasFieldErrors('title') ? 'is-invalid' : ''}" id="title" name="title" placeholder="Titre de l'annonce" value="${command?.title}">
+                    <input type="text" class="form-control ${command?.errors?.hasFieldErrors('title') ? 'is-invalid' : ''}" id="title" name="title" placeholder="Titre de l'annonce" value="${command?.title}" maxlength="64">
                     <div class="invalid-feedback">
                         <g:fieldError field="title" bean="${command}"/>
                     </div>
@@ -45,7 +45,7 @@
             <div class="form-row">
                 <div class="form-group col-sm-12">
                     <label for="description">${g.message(code:'occazCommand.description.label')}</label>
-                    <textarea rows="8" class="form-control ${command?.errors?.hasFieldErrors('description') ? 'is-invalid' : ''}" id="description" name="description">${command?.description}</textarea>
+                    <textarea rows="8" class="form-control ${command?.errors?.hasFieldErrors('description') ? 'is-invalid' : ''}" id="description" name="description" maxlength="2048">${command?.description}</textarea>
                     <div class="invalid-feedback">
                         <g:fieldError field="description" bean="${command}"/>
                     </div>

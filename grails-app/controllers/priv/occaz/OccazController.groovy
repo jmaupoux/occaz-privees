@@ -76,8 +76,8 @@ class OccazCommand implements Validateable {
     String mail
 
     static constraints = {
-        title(blank: false, size: 1..64)
-        description(blank: false, size: 1..2048)
+        title(blank: false, maxSize: 64)
+        description(blank: false, maxSize: 2048)
         price(nullable: true, validator:{
             value, obj ->
                 if(obj.free) return true

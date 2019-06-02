@@ -29,9 +29,12 @@ class Occaz {
         mainPic nullable: true
         skype nullable: true
         mail nullable: true
+        description nullable: false
     }
 
     static mapping = {
         sort dateCreated: "desc"
+        title length: 64
+        description length: 2048
     }
 }
