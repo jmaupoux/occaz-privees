@@ -1,8 +1,5 @@
 package priv.occaz
 
-
-import java.time.LocalDateTime
-
 class Occaz {
 
     String id
@@ -18,8 +15,8 @@ class Occaz {
     String skype
     String mail
 
-    LocalDateTime dateCreated
-    LocalDateTime lastUpdated
+    Date dateCreated
+    Date lastUpdated
 
     static hasOne = [mainPic:OccazPic]
 

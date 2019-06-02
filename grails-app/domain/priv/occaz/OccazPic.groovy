@@ -1,8 +1,5 @@
 package priv.occaz
 
-
-import java.time.LocalDate
-
 class OccazPic {
 
     String id
@@ -11,8 +8,8 @@ class OccazPic {
     byte[]  content
     String  contentType
 
-    LocalDate dateCreated
-    LocalDate lastUpdated
+    Date dateCreated
+    Date lastUpdated
 
     static constraints = {
         dateCreated nullable: true
