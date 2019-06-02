@@ -17,7 +17,7 @@
 <body class="h-100">
 <div class="wrapper">
     <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top bg-dark" role="navigation">
-        <a class="navbar-brand" href="/#"><asset:image src="occaz.png" alt="Priv'Occaz Logo" width="64px"/></a>
+        <a class="navbar-brand" href="/#"><asset:image src="priv-occaz.png" alt="Priv'Occaz Logo" width="64px"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
